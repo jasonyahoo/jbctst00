@@ -5,3 +5,4 @@ test:
   - echo "This Is A Test" && exit 1
   tags:
     - windows
+    - atqwest
