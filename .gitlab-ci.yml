@@ -3,6 +3,3 @@ image: centos:7
 test:
   script:
   - echo "This Is A Test" && exit 1
-  tags:
-    - windows
-    - atqwest
