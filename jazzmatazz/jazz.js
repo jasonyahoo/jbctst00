@@ -6,3 +6,6 @@ function jazzy(){
 function hiya(){
 	console.log("owiejhfo 9ew8fij");
 }
+function nothingatall(){
+	console.log(""ksdlf);
+}
