@@ -19,3 +19,4 @@ test:
     - git add .
     - git commit -m "Automated Commit from BB"
     - git push
+    - echo "goo day"
