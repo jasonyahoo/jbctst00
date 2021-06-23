@@ -15,5 +15,5 @@ test:
     - apt-get update -y
     - apt-get -y install rsync
     - ls -R $BITBUCKET_CLONE_DIR
-    - rsync -av --exclude=".*" --exclude="soongone" $BITBUCKET_CLONE_DIR/ soongone/
+    - rsync -av --exclude=".*" --exclude="soongone" $BITBUCKET_CLONE_DIR/ $BITBUCKET_CLONE_DIR/soongone/
     - echo "good day"
