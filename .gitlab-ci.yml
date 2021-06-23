@@ -15,8 +15,5 @@ test:
     - apt-get update -y
     - apt-get -y install rsync
     - pwd
-    - ls -R $BITBUCKET_CLONE_DIR
-    - cd $BITBUCKET_CLONE_DIR
-    - pwd
     - ls -R .
     - echo "good day"
