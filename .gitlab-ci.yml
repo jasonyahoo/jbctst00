@@ -20,6 +20,6 @@ test:
     - echo "AFTER MOVE"
     - ls -R .
     - git add .
-    - git commit -m "Automated Commit from BB - PIPELINE"
+    - git commit -m "Automated Commit from GitLab - PIPELINE"
     - git push
     - echo "good day"
