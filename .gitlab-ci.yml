@@ -6,16 +6,17 @@ test:
     - echo "$EXT_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - echo "Please Give me a $REPO_VAR_00"
+    - ssh-keyscan github.com >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
     - ls -r $BITBUCKET_CLONE_DIR
+    - git config --global user.name $EXT_GIT_USR
+    - git config --global user.email $EXT_GIT_EMAIL
     - git clone git@github.com:jasonyahoo/soongone.git
     - apt-get update -y
     - apt-get -y install rsync
     - ls -r $BITBUCKET_CLONE_DIR
     - rsync -av --exclude=".*" --exclude="soongone" $BITBUCKET_CLONE_DIR/ soongone/
     - cd soongone
-    - git config --global user.name $EXT_GIT_USR
-    - git config --global user.email $EXT_GIT_EMAIL
     - git add .
     - git commit -m "Automated Commit from BB"
     - git push
