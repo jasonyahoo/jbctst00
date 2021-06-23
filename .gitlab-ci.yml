@@ -15,9 +15,4 @@ test:
     - apt-get update -y
     - apt-get -y install rsync
     - ls -r $BITBUCKET_CLONE_DIR
-    - rsync -av --exclude=".*" --exclude="soongone" $BITBUCKET_CLONE_DIR/ soongone/
-    - cd soongone
-    - git add .
-    - git commit -m "Automated Commit from BB"
-    - git push
-    - echo "goo day"
+    - echo "good day"
