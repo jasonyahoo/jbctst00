@@ -14,6 +14,8 @@ test:
     - git clone git@github.com:jasonyahoo/soongone.git
     - apt-get update -y
     - apt-get -y install rsync
+    - pwd
     - ls -R $BITBUCKET_CLONE_DIR
-    - rsync -av --exclude=".*" --exclude="soongone" $BITBUCKET_CLONE_DIR/ $BITBUCKET_CLONE_DIR/soongone/
+    - cd $BITBUCKET_CLONE_DIR
+    - pwd
     - echo "good day"
