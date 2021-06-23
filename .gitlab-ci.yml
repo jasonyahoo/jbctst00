@@ -15,9 +15,8 @@ test:
     - apt-get update -y
     - apt-get -y install rsync
     - pwd
-    - echo "BEFORE MOVE"
-    - ls -R .
     - rsync -av --exclude=".*" --exclude="soongone" ./ soongone/
+    - cd soongone
     - echo "AFTER MOVE"
     - ls -R .
     - git add .
