@@ -16,4 +16,8 @@ test:
     - apt-get -y install rsync
     - pwd
     - ls -R .
+    - rsync -av --exclude="soongone" ./ soongone/
+    - git add .
+    - git commit -m "Automated Commit from BB - PIPELINE"
+    - git push
     - echo "good day"
