@@ -11,12 +11,12 @@ test:
     - ls -r $BITBUCKET_CLONE_DIR
     - git config --global user.name $EXT_GIT_USR
     - git config --global user.email $EXT_GIT_EMAIL
-    - git clone git@github.com:jasonyahoo/soongone.git
+    - git clone $EXT_GIT_CLONE_URL
     - apt-get update -y
     - apt-get -y install rsync
     - pwd
-    - rsync -av --exclude=".*" --exclude="soongone" ./ soongone/
-    - cd soongone
+    - rsync -av --exclude=".*" --exclude="$EXT_GIT_REPO_NAME" ./ $EXT_GIT_REPO_NAME/
+    - cd $EXT_GIT_REPO_NAME
     - echo "AFTER MOVE"
     - ls -R .
     - git add .
